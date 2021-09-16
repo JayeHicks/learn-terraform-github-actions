@@ -1,3 +1,9 @@
+/*
+You can get this t work using a default local backend.  Just comment out
+the backend{} block below and it will work (for now - the ami id will over
+the course of months/years depricate)
+*/
+
 terraform {
   required_providers {
     aws = {
@@ -36,7 +42,7 @@ resource "aws_instance" "web" {
 
   user_data = <<-EOF
               #!/bin/bash
-              echo "Hello, World" > index.html
+              echo "Hello world! This is Jayes pet web server." > index.html
               nohup busybox httpd -f -p 8080 &
               EOF
 }
