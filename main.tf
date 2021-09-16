@@ -17,15 +17,13 @@ terraform {
   }
   required_version = "~> 1.0"
 
-  /*
-  backend "remote" {
+    backend "remote" {
     organization = "Jayes-Cool-Org"
 
     workspaces {
       name = "demo-github-actions"
     }
   }
-  */
 }
 
 
